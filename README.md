@@ -26,5 +26,5 @@ This contract will mint the tokens automatically and distribute them to buyers i
 
 It will inherit `Crowdsale`, `CappedCrowdsale`, `TimedCrowdsale`, `RefundableCrowdsale`, and `MintedCrowdsale` from the OpenZeppelin library available through Github.
 
-The detailed screenshots of the project are available [here](Crowdsale/readme.md).
+The detailed screenshots of the project are available [here](Crowdsale/README.md).
 
