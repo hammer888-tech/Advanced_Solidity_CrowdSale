@@ -17,18 +17,19 @@ contract PupperCrowdCoinSale is Crowdsale, MintedCrowdsale, CappedCrowdsale, Tim
         PupperCoin token, // PupperCoin itself
         uint openingTime,
         uint closingTime,
-        uint cap,
+        //uint cap,
         uint goal
     )
         // @TODO: Pass the constructor parameters to the crowdsale contracts.
         public
         Crowdsale(rate, wallet, token)
-        CappedCrowdsale(cap)
+        //MintedCrowdsale()
+        CappedCrowdsale(goal)
         TimedCrowdsale(openingTime, closingTime)
         RefundableCrowdsale(goal)
     {
         // constructor can stay empty
-        require(goal<= cap, "PupperCoin Sales goal has exceeded the cap!");
+        //require(goal<= cap, "PupperCoin Sales goal has exceeded the cap!");
     }
 }
 
@@ -42,6 +43,7 @@ contract PupperCoinSaleDeployer {
         string memory name,
         string memory symbol,
         address payable wallet //this address will receive the Ether from the crowdsale
+        
     )
         public
     {
@@ -50,7 +52,7 @@ contract PupperCoinSaleDeployer {
         token_address = address(token);
         
         // @TODO: create the PupperCoinSale and tell it about the token, set the goal, and set the open and close times to now and now + 24 weeks.
-        PupperCrowdCoinSale Pupper_Sale = new PupperCrowdCoinSale(1, wallet, token, now, now + 24 weeks, 100, 50);
+        PupperCrowdCoinSale Pupper_Sale = new PupperCrowdCoinSale(1, wallet, token, now, now + 24 weeks, 300);
         token_sale_address = address(Pupper_Sale);
 
         // make the PupperCoinSale contract a minter, then have the PupperCoinSaleDeployer renounce its minter role
@@ -58,3 +60,6 @@ contract PupperCoinSaleDeployer {
         token.renounceMinter();
     }
 }
+
+
+
