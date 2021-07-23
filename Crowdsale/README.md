@@ -1,26 +1,25 @@
-### CrowdSale and Minting ERC-20 Tokens
+### CrowdSale and Minting ERC-20 (PUP) Tokens
 
-## Smart Contract Code for TieredProfitSplitter.sol
+## Code for Crowdsale.sol, and deployment of "PupperCoinSaleDeployer" Smart Contract
 ![](screenshots/1_PupperCoinSaleDeployed.png)
 
-### Value in each address prior to deploying smart contract that represent 'employee_one' = CEO, 'employee_two'= CTO and 'employee_three' = bob
-
+### Deployment of "PupperCrowdCoinSale" contract
 ![](screenshots/2_DeployedCrowdSaleCoin.png)
 
-### Compiled AssociateProfitSplitter.sol smart contract
+### Deployment of Smart Contract and associated input variables to allow interaction and send transactions
 
 ![](screenshots/3_ConfirmedContractDeployment.png)
 
-### Smart Contract Deployed
+### Deployment of "DeployedPupperCoinToken"
 
 ![](screenshots/4_DeployedPupperCoinToken.png)
 
-### Transaction is reflected in MetaMask
+### Transaction is reflected in MetaMask and PUP Token creation confirmed
 ![](screenshots/5_ConfirmedPUPTokenCreation.png)
 
-### Deployed PupperCoin
+### Deployed PupperCoin and confirmation of contract deployment in Ganache (Block 114)
 
 ![](screenshots/6_ConfirmedContractMined.png)
 
-### Accounts are updated to reflect equal (3way) profit split of 1ETH in Ganache
+### PupperCoin is fully interactive and transactions confirmed in Ganache (Block 117)
 ![](screenshots/7_PupperCoinCrowdSaleToken_Fullyinteractive.png)
